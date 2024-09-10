@@ -1,6 +1,6 @@
 /**
  * Theme Name:  gwt-ntc-mock1
- * Template:    gwt-ntc-wordpress
+ * Template:    gwt-wordpress25.2
  * Theme URI:   https://github.com/cevhyruz/gwt-ntc-wordpress
  * Description: A sample design for gwt-ntc-wordpress
  * Version:     0.1.0
@@ -9,3 +9,39 @@
  * Author URI:  https://github.com/cevhyruz
  * ...other header fields
 */
+
+
+#main-nav ul li:hover:not(.has-form) > a,
+	#main-nav .dropdown li:not(.has-form) a:not(.button):hover,
+	#main-nav .dropdown li:not(.has-form):hover > a:not(.button),
+	#aux-main ul li:hover:not(.has-form) > a,
+	#aux-main .dropdown li:not(.has-form) a:not(.button):hover,
+	#aux-main .dropdown li:not(.has-form):hover > a:not(.button) {
+  background: #e4e4e4;
+  font-size: 1em;
+  font-weight: normal;
+  -webkit-transition: all 30ms ease;
+  -moz-transition: all 30ms ease;
+  -ms-transition: all 30ms ease;
+  -o-transition: all 30ms ease;
+  transition: all 30ms ease;
+}
+
+#main-nav li:not(.has-form) a:not(.button),
+#main-nav li.active:not(.has-form) a:not(.button),
+#aux-main li:not(.has-form) a:not(.button),
+#aux-main li.active:not(.has-form) a:not(.button) {
+  padding: 3px 18px;
+}
+
+#main-nav li.current-menu-item:not(.has-form) a:not(.button),
+#aux-main li.current-menu-item:not(.has-form) a:not(.button),
+#offCanvasRight li.current-menu-item:not(.has-form) > a:not(.button) {
+  background-color: #e4e4e4;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+#main-nav ul li > a {
+  font-size: 1em !important;
+}
