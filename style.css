@@ -10,7 +10,6 @@
  * ...other header fields
 */
 
-
 #main-nav ul li:hover:not(.has-form) > a,
 	#main-nav .dropdown li:not(.has-form) a:not(.button):hover,
 	#main-nav .dropdown li:not(.has-form):hover > a:not(.button),
