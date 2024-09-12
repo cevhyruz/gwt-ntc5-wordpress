@@ -1,13 +1,13 @@
 /**
  * Theme Name:  gwt-ntc-mock1
- * Template:    gwt-wordpress25.2
+ * Template:    gwt-wordpress
  * Theme URI:   https://github.com/cevhyruz/gwt-ntc-wordpress
  * Description: A sample design for gwt-ntc-wordpress
  * Version:     0.1.0
  * Licence:     MIT License
  * Author:      cevhyruz
  * Author URI:  https://github.com/cevhyruz
- * ...other header fields
+ * aother
 */
 
 #main-nav ul li:hover:not(.has-form) > a,
@@ -16,9 +16,10 @@
 	#aux-main ul li:hover:not(.has-form) > a,
 	#aux-main .dropdown li:not(.has-form) a:not(.button):hover,
 	#aux-main .dropdown li:not(.has-form):hover > a:not(.button) {
-  background: #e4e4e4;
+  background: #dfe6e9;
+  color: #2d3436;
   font-size: 1em;
-  font-weight: normal;
+  font-weight: bold;
   -webkit-transition: all 30ms ease;
   -moz-transition: all 30ms ease;
   -ms-transition: all 30ms ease;
@@ -26,21 +27,83 @@
   transition: all 30ms ease;
 }
 
+#off-canvas-container {
+  z-index: 4;
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.6);
+}
+
+.container-main h1 {
+  color: #2d3436;
+}
+
+#pst-container {
+  color: #2d3436;
+  font-size: 1em;
+  font-weight: normal;
+}
+
+.search-form {
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* .entry-content { */
+/*   color: #2d3436; */
+/* } */
+
+
+* { border: none !important; }
+
 #main-nav li:not(.has-form) a:not(.button),
 #main-nav li.active:not(.has-form) a:not(.button),
 #aux-main li:not(.has-form) a:not(.button),
 #aux-main li.active:not(.has-form) a:not(.button) {
   padding: 3px 18px;
+
 }
 
 #main-nav li.current-menu-item:not(.has-form) a:not(.button),
 #aux-main li.current-menu-item:not(.has-form) a:not(.button),
 #offCanvasRight li.current-menu-item:not(.has-form) > a:not(.button) {
-  background-color: #e4e4e4;
+  background-color: #dfe6e9;
+  color: black;
   font-size: 1rem;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 #main-nav ul li > a {
   font-size: 1em !important;
+  font-weight: bold;
+}
+.container-main a, .container-main a:active, .container-main a:visited, .anchor a, .anchor a:active, .anchor a:visited {
+  color: #2d3436 !important;
+
+}
+
+.container {
+  /* display: flex; */
+  /* justify-content: flex-end; */
+  align-items: center;
+  width: 100%;
+  height: 500px; /* Adjust height as needed */
+  background: url('http://localhost/wordpress/wp-content/uploads/2024/09/Citizens-Charter.png') no-repeat center center;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #ddd; /* Optional border for visibility */
+  padding: 20px;
+  box-sizing: border-box;
+  color: red;
+}
+
+.button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 7px 10px;
+  margin-bottom: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #0056b3;
 }
