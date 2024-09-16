@@ -130,3 +130,28 @@ function affiliated_websites_register_widgets() {
   register_widget('ntc5_affiliated_websites');
 }
 add_action('widgets_init', 'affiliated_websites_register_widgets');
+
+class ntc5_about_us extends WP_Widget {
+  function __construct() {
+    parent::__construct(
+      'ntc5_about_us',
+      __(
+        'NTC5 About Us',
+        'text_domain'
+      ),
+      array('description' => __(
+        'NTC5 About Us',
+        'text_domain'
+      ))
+    );
+  }
+  public function widget($args, $instance) {
+    echo $args['before_widget'];
+    include( get_stylesheet_directory() . '/widgets/about_us.php' );
+    echo $args['after_widget'];
+  }
+}
+function about_us_register_widgets() {
+  register_widget('ntc5_about_us');
+}
+add_action('widgets_init', 'about_us_register_widgets');
