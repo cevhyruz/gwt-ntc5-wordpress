@@ -1,23 +1,34 @@
-<?php $cwp = get_stylesheet_directory_uri() . "/images/cwp.png"; ?>
+<?php $cwp = get_stylesheet_directory_uri() . "/images/consumer.jpg"; ?>
 
 <center>
   <h2>Frontline Services</h2>
 </center>
+
 <div id="frontline-services">
-    <div class="service-item">
+<a href="#" class="service-item">
+    <div>
         <i class="fa fa-address-card" aria-hidden="true"></i>
-        <p>Licensing</p>
+        <h4>Licensing</h4>
     </div>
-    <div class="service-item">
+</a>
+
+<a href="#" class="service-item">
+    <div>
         <i class="fa fa-desktop" aria-hidden="true"></i>
-        <p>Monitoring</p>
+        <h4>Monitoring</h4>
     </div>
-    <div class="service-item">
+</a>
+
+<a href="#" class="service-item">
+    <div>
         <i class="fa fa-binoculars" aria-hidden="true"></i>
-        <p>Inspection</p>
+        <h4>Inspection</h4>
     </div>
-</div>
-<div class="fs_container">
-<img src="<?php echo $cwp; ?>" alt="Consumer Welfare and Protection">
-  <p>Consumer Welfare and Protection<p>
+</a>
+
+<a href="#">
+  <img id="consumer" src="<?php echo $cwp; ?>" alt="Consumer Welfare and Protection">
+<h3>Consumer Welfare and Protection</h3>
+</a>
+
 </div>

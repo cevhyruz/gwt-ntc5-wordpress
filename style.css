@@ -3,8 +3,112 @@
  * Template:    gwt-wordpress
  * Theme URI:   https://github.com/cevhyruz/gwt-ntc-wordpress
  * Description: A sample design for gwt-ntc-wordpress
+ * Author:      John Fred Fadrigalan <cevhyruz>
  * Version:     0.1.0
  * Licence:     MIT License
  * Author:      cevhyruz
  * Author URI:  https://github.com/cevhyruz
 */
+
+/* NTC5 Default Widgets {{{1 */
+
+/* google map widget {{{2 */
+#map {
+  height: 35vh;
+  width: 100%;
+  border: 5px solid #dadada !important;
+  border-radius: 5px;
+}
+
+/* Official Seal */
+.official-seals {
+  text-align: center;
+}
+
+/* frontline services  {{{2 */
+
+.fs_container {
+  text-align: center;
+  background-color: #efefef;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+#consumer:hover {
+  cursor: pointer;
+}
+
+#consumer img {
+  height: 50px;
+}
+
+#frontline-services {
+  text-align: center;
+}
+
+
+#frontline-services img {
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+#frontline-services {
+  padding-top: 20px;
+  border: 1px solid  #dadada;
+}
+
+#frontline-services a h3 {
+  margin-top: 20px;
+}
+
+.service-item {
+  display: inline-block;
+  text-align: center;
+  padding: 4px;
+  background-color: #efefef;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.service-item:hover {
+  background-color: #dadada;
+  cursor: pointer;
+}
+.service-item p { font-size: 18px; }
+.service-item i {
+  margin-bottom: 8px;
+  font-size: 55px;
+  color: #007BFF;
+}
+
+
+/* Citizen's Charter {{{2 */
+
+.container {
+  align-items: center;
+  height: 400px;
+  background-size: contain;
+  background-position: center;
+  border: 5px solid #efefef;
+  border-radius: 5px;
+  padding: 20px;
+  color: red;
+}
+
+#charter-item {
+  text-decoration: underline;
+  padding: 2px;
+  margin-top: 20px;
+  margin: 3px !important;
+}
+
+
+#charter-container {
+  border: 1px solid #dadada;
+  padding-top: 20px;
+  text-align: center
+}
+
+.link {
+  text-decoration: underline !important;
+}
