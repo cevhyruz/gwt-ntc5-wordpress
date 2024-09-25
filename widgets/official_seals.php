@@ -4,7 +4,6 @@
   $foi          = get_stylesheet_directory_uri() . "/images/foi_logo_95x95.png";
 ?>
 
-
 <center>
   <h2>Official Seals</h2>
 </center>

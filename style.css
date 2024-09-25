@@ -20,6 +20,19 @@
   border-radius: 5px;
 }
 
+/* Directors Corner  */
+#directors-corner-wrapper img {
+  height: 200px;
+  border: 5px solid #dadada;
+  border-radius: 10px;
+}
+
+.link {
+  float: right;
+  font-size: 21px;
+  margin-top: 70px;
+}
+
 /* Official Seal */
 .official-seals {
   text-align: center;
@@ -34,12 +47,12 @@
   padding-bottom: 10px;
 }
 
-#consumer:hover {
-  cursor: pointer;
+.consumer-container {
+  text-align: center;
 }
-
-#consumer img {
-  height: 50px;
+.consumer-container img {
+  height: 200px;
+  margin-bottom: 25px;
 }
 
 #frontline-services {
@@ -64,7 +77,7 @@
 .service-item {
   display: inline-block;
   text-align: center;
-  padding: 4px;
+  padding: 10px;
   background-color: #efefef;
   border-radius: 5px;
   margin-bottom: 5px;
@@ -80,7 +93,6 @@
   font-size: 55px;
   color: #007BFF;
 }
-
 
 /* Citizen's Charter {{{2 */
 
@@ -102,11 +114,14 @@
   margin: 3px !important;
 }
 
-
 #charter-container {
-  border: 1px solid #dadada;
+  /* border: 1px solid #dadada; */
   padding-top: 20px;
   text-align: center
+}
+#charter-container img {
+   height: 380px;
+   width: 80%;
 }
 
 .link {

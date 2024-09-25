@@ -6,6 +6,9 @@
  * @since Government Website Template 26
  */
 
+
+/**  citizens charter */
+
 class ntc_widget_citizens_charter extends WP_Widget {
   function __construct() {
     parent::__construct(
@@ -30,6 +33,8 @@ function citizens_charter_register_widgets() {
   register_widget( 'ntc_widget_citizens_charter' );
 }
 add_action( 'widgets_init', 'citizens_charter_register_widgets' );
+
+/** Official Seals */
 
 class ntc_widget_official_seals extends WP_Widget {
   function __construct() {
@@ -56,6 +61,8 @@ function official_seals_register_widget() {
 }
 add_action( 'widgets_init', 'official_seals_register_widget' );
 
+/**NTC5 frontline services */
+
 class ntc_frontline_services extends WP_Widget {
   function __construct() {
     parent::__construct(
@@ -80,6 +87,10 @@ function frontline_services_register_widgets() {
   register_widget('ntc_frontline_services');
 }
 add_action('widgets_init', 'frontline_services_register_widgets');
+
+/**
+ * Site Googlemap
+ */
 
 class ntc5_site_googlemap extends WP_Widget {
   function __construct() {
@@ -106,6 +117,10 @@ function site_gmap_register_widgets() {
 }
 add_action( 'widgets_init', 'site_gmap_register_widgets' );
 
+/**
+ * Affiliated Websites
+ */
+
 class ntc5_affiliated_websites extends WP_Widget {
   function __construct() {
     parent::__construct(
@@ -131,6 +146,9 @@ function affiliated_websites_register_widgets() {
 }
 add_action('widgets_init', 'affiliated_websites_register_widgets');
 
+/** 
+ * About Us
+ */
 class ntc5_about_us extends WP_Widget {
   function __construct() {
     parent::__construct(
@@ -155,3 +173,61 @@ function about_us_register_widgets() {
   register_widget('ntc5_about_us');
 }
 add_action('widgets_init', 'about_us_register_widgets');
+
+/**
+ * Directors Corner
+ */
+
+class ntc_directors_corner extends WP_Widget {
+  function __construct() {
+    parent::__construct(
+      'ntc5_directors_corner',
+      __(
+        'NTC5 Directors Corner',
+        'text_doman'
+      ),
+      array('description' => __(
+        'NTC5 Directors Corner',
+        'text_domain'
+      ))
+    );
+  }
+  public function widget($args, $instance) {
+    echo $args['before_widget'];
+    include( get_stylesheet_directory() . '/widgets/directors_corner.php' );
+    echo $args['after_widget'];
+  }
+}
+function directors_corner_register_widgets() {
+ register_widget('ntc_directors_corner');
+}
+add_action('widgets_init', 'directors_corner_register_widgets');
+
+/**
+ * Consumer Welfare and Protection
+ */
+
+class ntc_consumer_welfare extends WP_Widget {
+  function __construct() {
+    parent::__construct(
+      'ntc5_consumer_welfare',
+      __(
+        'NTC5 Consumer Welfare and Protection',
+        'text_domain'
+      ),
+      array('description' => __(
+        'NTC5 Consumer Welfare and Protectdion',
+        'text_domain'
+      ))
+    );
+  }
+  public function widget($args, $instance) {
+    echo $args['before_widget'];
+    include( get_stylesheet_directory() . '/widgets/consumer_welfare.php' );
+    echo $args['after_widget'];
+  }
+}
+function ntc_consumer_welfare_register_widgets() {
+  register_widget('ntc_consumer_welfare');
+}
+add_action('widgets_init', 'ntc_consumer_welfare_register_widgets');
