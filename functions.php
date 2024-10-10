@@ -14,4 +14,22 @@ function gwt_ntc_mock1_enqueue_scripts() {
 }
 add_action('wp_enqueue_scripts', 'gwt_ntc_mock1_enqueue_scripts');
 
+
+/* Display page content anywhere */
+function display_page_content($atts) {
+    $atts = shortcode_atts(
+        array('id' => ''), $atts, 'display_page'
+    );
+    
+    $page = get_post($atts['id']);
+    
+    if ($page) {
+        return apply_filters('the_content', $page->post_content);
+    } else {
+        return 'Page not found.';
+    }
+}
+add_shortcode('display_page', 'display_page_content');
+
+
 ?>

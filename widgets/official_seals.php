@@ -5,8 +5,13 @@
 ?>
 
 <center>
-  <h2>Official Seals</h2>
+  <h2>
+<i class="fa fa-bookmark" aria-hidden="true"></i>
+Official Seals
+<i class="fa fa-bookmark" aria-hidden="true"></i>
+</h2>
 </center>
+<br>
 
 <div class="official-seals">
   <a href="https://ntc.gov.ph/" target="_blank" alt="National Telecommunications Commission" title="National Telecommunications Commission">

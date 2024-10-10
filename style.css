@@ -1,6 +1,6 @@
 /**
  * Theme Name:  gwt-ntc5-wordpress
- * Template:    gwt-wordpress
+ * Template:    gwt-wordpress-25.3.3
  * Theme URI:   https://github.com/cevhyruz/gwt-ntc-wordpress
  * Description: A sample design for gwt-ntc-wordpress
  * Author:      John Fred Fadrigalan <cevhyruz>
@@ -10,27 +10,123 @@
  * Author URI:  https://github.com/cevhyruz
 */
 
+* {
+  border: none !important;
+}
+
+/* gutena accordion */
+p {
+  font-size: 17px !important;
+}
+
+.wp-block-gutena-accordion-panel:hover {
+  background-color: #efefef !important;
+
+}
+
+/* NOTE [!]
+ * this is temporarily for <hr> in the 'mission and vission' page
+ * take note that this is global and will be inherited.
+ * */
+
+hr {
+  border: 1px solid black !important;
+  width: 80%;
+  justify-content: center;
+  margin: 8px auto;
+  padding: 0;
+}
+
+/* fontawesome 4.7  {{{1 */
+
+.fa-bookmark { color: #dadada; }
+
+/* Connect with Us {{{2 */
+.fa-envelope-o, .fa-facebook-square {
+  color: #767676;
+  font-size: 45px;
+  margin: 5px;
+}
+
+
+.thumbnail {
+   width: 24vw !important;
+   height: 24vh !important;
+}
+
+#agency-name {
+  border-top: 3px solid !important;
+}
+
+.search-field {
+  border: 1px solid #ACB1B4 !important;
+  border-radius: 5px !important;
+}
+
+
+/* PST */
+
+div.pst-container a {
+  color: #ACB1B4 !important;
+}
+
+/* Announcements */
+
+#announcements {
+  border: 1px solid #dadada !important;
+  height: 300px;
+}
+
+#main-nav {
+  z-index: 1000 !important;
+}
+
+.content-links {
+  text-decoration: underline !important;
+}
+
+.content-links strong {
+  color: blue !important;
+}
+
+/* all image-banner-like inside the widget area  */
+.widget-image {
+  border: 10px solid #dadada;
+  border-radius: 13px;
+  padding: 10px;
+}
+
 /* NTC5 Default Widgets {{{1 */
 
 /* google map widget {{{2 */
 #map {
-  height: 35vh;
+  height: 250px;
   width: 100%;
-  border: 5px solid #dadada !important;
+  border: 1px solid #dadada !important;
   border-radius: 5px;
 }
 
 /* Directors Corner  */
 #directors-corner-wrapper img {
-  height: 200px;
-  border: 5px solid #dadada;
+  height: 190px;
+  /* border: 5px solid #dadada; */
   border-radius: 10px;
 }
 
+/* directors_corner:image_hover */
+
+.oxi_addons__image_main {
+  height: 100px;
+}
+
 .link {
-  float: right;
-  font-size: 21px;
-  margin-top: 70px;
+  font-size: 15px;
+  text-transform: uppercase;
+  display: flex;
+  margin-top: 10px;
+  font-weight: bold;
+  text-decoration: underline;
+  padding: 5px;
 }
 
 /* Official Seal */
@@ -38,92 +134,170 @@
   text-align: center;
 }
 
+
+/* consumer */
+
+.consumer-container img {
+  height: 210px;
+  margin-top: -30px;
+}
+
+
+
 /* frontline services  {{{2 */
 
-.fs_container {
-  text-align: center;
-  background-color: #efefef;
-  padding-top: 20px;
-  padding-bottom: 10px;
-}
-
-.consumer-container {
-  text-align: center;
-}
-.consumer-container img {
-  height: 200px;
-  margin-bottom: 25px;
-}
-
-#frontline-services {
-  text-align: center;
-}
-
-
-#frontline-services img {
-  margin-top: 20px;
-  border-radius: 5px;
-}
-
-#frontline-services {
-  padding-top: 20px;
-  border: 1px solid  #dadada;
-}
-
-#frontline-services a h3 {
-  margin-top: 20px;
-}
-
 .service-item {
-  display: inline-block;
-  text-align: center;
-  padding: 10px;
-  background-color: #efefef;
+  justify-content: center;
+  display: flex;
+}
+
+.service-item img {
+  height: 57px;
+  width: 57px;
+  padding: 5px;
+  border-radius: 20px;
+  /* border-radius: 40px; */
+  margin-right: 10px;
+  /* border: 1px solid #dadada !important; */
+}
+
+/* container of inline items */
+.service-item > a {
+  border: 1px solid #dadada !important;
+  /* justify-content: center; */
+  width: 95%;
   border-radius: 5px;
-  margin-bottom: 5px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  margin: 5px;
 }
 
-.service-item:hover {
-  background-color: #dadada;
-  cursor: pointer;
+.service-item > a:hover {
+   background-color: #CCDDEE;
 }
-.service-item p { font-size: 18px; }
-.service-item i {
-  margin-bottom: 8px;
-  font-size: 55px;
-  color: #007BFF;
-}
-
 /* Citizen's Charter {{{2 */
 
-.container {
-  align-items: center;
-  height: 400px;
-  background-size: contain;
-  background-position: center;
-  border: 5px solid #efefef;
+/* #2d3436 */
+.citizens-charter a {
+  display: flex;
+  border: 1px solid #dadada !important;
+  padding: 13px;
+  justify-content: center;
+  width: 95%;
   border-radius: 5px;
-  padding: 20px;
-  color: red;
 }
 
-#charter-item {
-  text-decoration: underline;
-  padding: 2px;
-  margin-top: 20px;
-  margin: 3px !important;
+.citizens-charter a:hover {
+  background-color: #CCDDEE;
 }
 
-#charter-container {
-  /* border: 1px solid #dadada; */
-  padding-top: 20px;
-  text-align: center
-}
-#charter-container img {
+.citizens-charter img {
    height: 380px;
-   width: 80%;
 }
 
-.link {
-  text-decoration: underline !important;
+
+/* Additional css **/
+
+/*  FAQs **/
+.faq-container {
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #dadada;
+}
+
+/* h2 { */
+/*     text-align: center; */
+/*     margin-bottom: 20px; */
+/* } */
+
+.faq-item {
+    margin-bottom: 0;
+}
+
+/* Styling for FAQ Content */
+.faq-content {
+  text-align: left !important;
+  font-size: 18px;
+  color: #2C3631;
+  padding: 0; /* Reset padding for closed state */
+  max-height: 0; /* Start fully collapsed */
+  overflow: hidden; /* Hide overflow when closed */
+  background-color: white;
+  border-left: 4px solid #007BFF;
+  transition: max-height 0.1s ease-out, padding 0.1s ease-out; /* Smooth transition */
+  border-bottom: 1px solid #dadada;
+}
+
+/* Button Styling */
+.faq-item button {
+    color: black;
+    margin-top: 20px;
+    padding: 20px;
+    text-align: left;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+    background: none;
+    border: none !important;
+}
+
+.faq-item button:hover {
+    background-color: #efefef;
+}
+
+/* Icon Before the Button Text */
+.faq-item button:before {
+    color: #2C3631;
+    content: ' +  ';
+    font-style: normal;
+    font-weight: bold;
+}
+
+.faq-item button.active:before {
+    color: #2C3631;
+    content: ' –  ';
+    font-style: normal;
+    font-weight: bold;
+}
+
+/* Active Button Border */
+.faq-item button.active {
+    border-left: 4px solid #007BFF;
+}
+
+/* Open State for Content */
+.faq-item button.active + .faq-content {
+    max-height: 2000px; /* Set high enough value to allow expansion */
+    padding: 5px 15px 10px 15px;    /* Reset padding to make space for content */
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  /* Reduce font size and padding on mobile for better fit */
+  .faq-content {
+    font-size: 16px;
+    /* padding: 5px; */
+  }
+  .faq-item button {
+    font-size: 18px;
+    padding: 10px;
+  }
+  /* Adjust max-height for smaller screens */
+  .faq-item button.active + .faq-content {
+    max-height: 500px; /* Adjust max-height for mobile screens */
+  }
+}
+
+/* social links  */
+.wp-social-link svg {
+  height: 40px !important;
+  width: 40px !important;
+  color: #444444 !important;
+}
+
+.wp-block-social-links-is-layout-flex {
+  margin-top: -30px;
 }

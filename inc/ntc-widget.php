@@ -6,7 +6,6 @@
  * @since Government Website Template 26
  */
 
-
 /**  citizens charter */
 
 class ntc_widget_citizens_charter extends WP_Widget {
@@ -23,7 +22,7 @@ class ntc_widget_citizens_charter extends WP_Widget {
       ))
     );
   }
-  public function widget($args, $instance) {
+  public function widget( $args, $instance ) {
     echo $args['before_widget'];
     include( get_stylesheet_directory() . '/widgets/citizens_charter.php');
     echo $args['after_widget'];
@@ -231,3 +230,62 @@ function ntc_consumer_welfare_register_widgets() {
   register_widget('ntc_consumer_welfare');
 }
 add_action('widgets_init', 'ntc_consumer_welfare_register_widgets');
+
+class ntc_social_icons extends WP_Widget {
+  function __construct() {
+    parent::__construct(
+      'ntc5_social_icons',
+      __(
+        'NTC5 Social Media Icons',
+        'text_domain'
+      ),
+      array('description' => __(
+        'NTC5 Social Media Icons',
+        'text_domain'
+      ))
+    );
+  }
+  public function widget($args, $instance) {
+    echo $args['before_widget'];
+    include(get_stylesheet_directory() . '/widgets/social_icons.php');
+    echo $args['after_widget'];
+  }
+}
+function ntc_social_icons_register_widgets() {
+  register_widget('ntc_social_icons');
+}
+add_action('widgets_init', 'ntc_social_icons_register_widgets');
+
+/* Announcements */
+
+class NTC5_Announcements extends WP_Widget {
+  function __construct() {
+    parent::__construct(
+      'ntc5_announcements',
+      __('NTC5 Announcements', 'text_domain'),
+      array('description' => __('Displays announcements', 'text_domain'))
+    );
+  }
+  public function widget( $args, $instance ) {
+    echo $args['before_widget'];
+    echo '<h2>' . esc_html($instance['title']) . '</h2>'; // Display title
+    include(get_stylesheet_directory() . '/widgets/announcements.php');
+    echo $args['after_widget'];
+  }
+  public function form($instance) {
+    $title = !empty($instance['title']) ? $instance['title'] : '';
+    echo '<p>';
+    echo '<label for="' . $this->get_field_id('title') . '">' . __('Title:') . '</label>';
+    echo '<input class="widefat" id="' . $this->get_field_id('title') . '" name="' . $this->get_field_name('title') . '" type="text" value="' . esc_attr($title) . '">';
+    echo '</p>';
+  }
+  public function update( $new_instance, $told_instance ) {
+    $instance = $old_instance;
+    $instance['title'] = strip_tags( $new_instance['title'] );
+    return $instance;
+  }
+}
+function ntc_announcements_register_widgets() {
+  register_widget('NTC5_Announcements');
+}
+add_action('widgets_init', 'ntc_announcements_register_widgets');

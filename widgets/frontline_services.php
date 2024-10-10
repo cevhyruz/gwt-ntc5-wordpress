@@ -1,28 +1,43 @@
 <?php
+  $licensing = get_stylesheet_directory_uri() . "/images/licensing.png";
+  $monitoring = get_stylesheet_directory_uri() . "/images/monitoring.png";
+  $inspection = get_stylesheet_directory_uri() . "/images/inspection.png";
 ?>
-
 <div id="frontline-services">
-<center>
-  <h2>Frontline Services</h2>
-</center>
-<a href="#" class="service-item">
-    <div>
-        <i class="fa fa-address-card" aria-hidden="true"></i>
-        <h5>Licensing</h5>
-    </div>
-</a>
 
-<a href="#" class="service-item">
-    <div>
-        <i class="fa fa-desktop" aria-hidden="true"></i>
-        <h5>Monitoring</h5>
-    </div>
-</a>
+  <center>
+    <h2>
+<i class="fa fa-bookmark" aria-hidden="true"></i>
+Frontline Services
+<i class="fa fa-bookmark" aria-hidden="true"></i>
+</h2>
+  </center>
 
-<a href="#" class="service-item">
-    <div>
-        <i class="fa fa-binoculars" aria-hidden="true"></i>
-        <h5>Inspection</h5>
-    </div>
-</a>
+  <div class="service-item">
+  <a href="<?php echo home_url('index.php/monitoring');?>">
+      <div class="image-wrapper">
+        <img src="<?php echo $monitoring; ?>">
+      </div>
+      <h4>Monitoring</h4>
+  </a>
+  </div>
+
+  <div class="service-item">
+    <a href="<?php echo home_url('index.php/mobile-licensing');?>">
+        <div class="image-wrapper">
+          <img src="<?php echo $licensing; ?>">
+        </div>
+        <h4>Licensing</h4>
+    </a>
+  </div>
+
+  <div class="service-item">
+    <a href="<?php echo home_url('index.php/monitoring');?>">
+        <div class="image-wrapper">
+          <img src="<?php echo $inspection; ?>">
+        </div>
+        <h4>Inspection</h4>
+    </a>
+  </div>
+
 </div>
