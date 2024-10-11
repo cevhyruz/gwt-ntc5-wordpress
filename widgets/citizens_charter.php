@@ -13,12 +13,14 @@
 Citizens Charter
 <i class="fa fa-bookmark" aria-hidden="true"></i>
 </h2>
-<h4><a href="<?php echo $internal;?>" target="_blank" title="Internal Services">internal services</a></h4>
-<h4><a href="<?php echo $external;?>" target="_blank" title="Enternal Services">external services</a></h4>
-<h4><a href="<?php echo $pursuant;?>" target="_blank" title="Pursuant to RA No. 11032">pursuant to ra no. 11032</a></h4>
+<br />
+<h4><a class="charter-links" href="<?php echo $internal;?>" target="_blank" title="Internal Services">internal services</a></h4>
+<h4><a class="charter-links" href="<?php echo $external;?>" target="_blank" title="Enternal Services">external services</a></h4>
+<h4><a class="charter-links" href="<?php echo $pursuant;?>" target="_blank" title="Pursuant to RA No. 11032">pursuant to ra no. 11032</a></h4>
 </center>
 
 <center>
-  <img class="widget-image" src="<?php echo $citizens_charter; ?>">
+<a href="<?php echo home_url('/index.php/citizens-charter')?>">
+  <img class="widget-image" src="<?php echo $citizens_charter; ?>" /></a>
 </center>
 </div>
