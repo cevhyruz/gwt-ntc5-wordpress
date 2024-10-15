@@ -14,6 +14,19 @@
   border: none !important;
 }
 
+/* bagong pilipinas */
+
+#bagong-pilipinas {
+  height: 130px;
+}
+
+/* post-content */
+#content {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px 10px;;
+}
+
 /* gutena accordion */
 p {
   font-size: 17px !important;
@@ -29,15 +42,24 @@ p {
  * take note that this is global and will be inherited.
  * */
 
-hr {
-  border: 1px solid black !important;
-  width: 80%;
+#post-separator {
+  border: 1px solid #efefef !important;
   justify-content: center;
   margin: 8px auto;
   padding: 0;
+  /* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); */
 }
 
-/* fontawesome 4.7  {{{1 */
+
+/* hr { */
+/*   border: 1px solid black !important; */
+/*   width: 80%; */
+/*   justify-content: center; */
+/*   margin: 8px auto; */
+/*   padding: 0; */
+/* } */
+
+/* fontawesome 4.7  {{{1 *
 
 .fa-bookmark { color: #dadada; }
 
@@ -46,12 +68,6 @@ hr {
   color: #767676;
   font-size: 45px;
   margin: 5px;
-}
-
-
-.thumbnail {
-   width: 24vw !important;
-   height: 24vh !important;
 }
 
 #agency-name {
@@ -108,7 +124,7 @@ div.pst-container a {
 
 /* Directors Corner  */
 #directors-corner-wrapper img {
-  height: 190px;
+  height: 150px;
   /* border: 5px solid #dadada; */
   border-radius: 10px;
 }
@@ -179,7 +195,7 @@ div.pst-container a {
 /* Citizen's Charter {{{2 */
 
 /* #2d3436 */
-.citizens-charter a {
+.citizens-charter .charter-links {
   display: flex;
   border: 1px solid #dadada !important;
   padding: 13px;
@@ -188,14 +204,13 @@ div.pst-container a {
   border-radius: 5px;
 }
 
-.citizens-charter a:hover {
+.citizens-charter .charter-links:hover {
   background-color: #CCDDEE;
 }
 
 .citizens-charter img {
    height: 380px;
 }
-
 
 /* Additional css **/
 
